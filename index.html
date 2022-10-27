@@ -7,10 +7,10 @@
 </body>
 <script>
 var test = document.getElementById("test");
-var num = 0;
-while(num < 100){
+setinterval(function() {
+	var num = 0;
 	num++;
 	test.innerHTML = num;
-}
+}, 1000);
 </script>
 </html>
