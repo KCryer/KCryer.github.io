@@ -15,15 +15,15 @@
 		var cookies;
 		setInterval(function() {
 			num++;
-			count += num;
-			test.innerHTML = count;
+			count = num;
+			test.innerHTML = num;
 			cookies = document.cookie = "count=" + count + "; expires=Sun, 30 Oct 2022 12:00:00 UTC";
 			console.log(cookies);
 		}, 1000);
 		function add(){
 			num++;
-			count += num;
-			test.innerHTML = count;
+			count = num;
+			test.innerHTML = num;
 			cookies = document.cookie = "num=" + count + "; expires=Sun, 30 Oct 2022 12:00:00 UTC";
 			console.log(cookies);
 		}
