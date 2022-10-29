@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <head>
+
 </head>
 
 <body>
 	<h1 id="test"></h1>
 	<button type="button" onclick="add()">Click Me!</button>
 	<button type="button" onclick="window.location.href='https://kcryer.github.io/test.html';">Next Page</button>
-</body>
-<script>
-window.onload = function() {alert(cookies)}
-var test = document.getElementById("test");
-var num = 0;
-var cookies = document.cookie = "num=0";
-setInterval(function() {
-	num++;
-	test.innerHTML = num;
-	cookies = document.cookie = "num=" + num + "; expires=Sun, 30 Oct 2022 23:00:00 UTC";
-}, 1000);
-function add(){
-	num++;
-	test.innerHTML = num;
-	cookies = document.cookie = "num=" + num + "; expires=Sun, 30 Oct 2022 23:00:00 UTC";
-	console.log(cookies);
-	//alert(cookies);
-}
+	
+	<script>
+		var test = document.getElementById("test");
+		var num = 0;
+		var cookies;
+		setInterval(function() {
+			num++;
+			test.innerHTML = num;
+			cookies = document.cookie = "num=" + num + "; expires=Sun, 30 Oct 2022 12:00:00 UTC";
+			console.log(cookies);
+		}, 1000);
+		function add(){
+			num++;
+			test.innerHTML = num;
+			cookies = document.cookie = "num=" + num + "; expires=Sun, 30 Oct 2022 12:00:00 UTC";
+			console.log(cookies);
+		}
 </script>
+</body>
+
 
 </html>
