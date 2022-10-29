@@ -11,17 +11,20 @@
 	<script>
 		var test = document.getElementById("test");
 		var num = 0;
+		var count;
 		var cookies;
 		setInterval(function() {
 			num++;
-			test.innerHTML = num;
-			cookies = document.cookie = "num=" + num + "; expires=Sun, 30 Oct 2022 12:00:00 UTC";
+			count += num;
+			test.innerHTML = count;
+			cookies = document.cookie = "count=" + count + "; expires=Sun, 30 Oct 2022 12:00:00 UTC";
 			console.log(cookies);
 		}, 1000);
 		function add(){
 			num++;
-			test.innerHTML = num;
-			cookies = document.cookie = "num=" + num + "; expires=Sun, 30 Oct 2022 12:00:00 UTC";
+			count += num;
+			test.innerHTML = count;
+			cookies = document.cookie = "num=" + count + "; expires=Sun, 30 Oct 2022 12:00:00 UTC";
 			console.log(cookies);
 		}
 </script>
