@@ -43,7 +43,9 @@
 		}
 		function buy() {
 			num -= 100;
-			list.innnerHTML = "seed";
+			let item = document.createElement('li');
+			item.appendChild(document.createTextNode('seed'));
+			list.appendChild(item);
 			seeds += 1;
 			cookies = document.cookie = "seeds=" + seeds + "; expires=Mon, 31 Oct 2022 12:00:00 UTC";
 			console.log(cookies);
