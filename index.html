@@ -7,12 +7,22 @@
 	<h1 id="test"></h1>
 	<button type="button" onclick="add()">Click Me!</button>
 	<button type="button" onclick="window.location.href='https://kcryer.github.io/test.html';">Next Page</button>
+	<button type="button" onclick="buy()">Seed (100)</button>
+	<ul id="list">
+	<li></li>
+	</ul>
 	
 	<script>
+		<!--This does NOT work! I do not think it would be possible to
+			<!--save a value to a cookie every second without being reset
+				<!--or saving it somewhere else. Cookies DO seem to be working tho so hope is not lost!-->
+		<!---Best course of action from now is to use the value BEFORE saving it-->
 		var test = document.getElementById("test");
+		var list = document.getElementById("list");
 		var num = 0;
 		var count;
 		var cookies;
+		var seeds;
 		setInterval(function() {
 			num++;
 			if(count < num){
@@ -31,6 +41,12 @@
 			test.innerHTML = num;
 			cookies = document.cookie = "num=" + count + "; expires=Sun, 30 Oct 2022 12:00:00 UTC";
 			console.log(cookies);
+		}
+		function buy() {
+			num -= 100;
+			list.innnerHTML = "seed";
+			seeds += 1;
+			cookies = document.cookie = "seeds=" + seeds + "; expires=Mon, 31 Oct 2022 12:00:00 UTC";
 		}
 </script>
 </body>
